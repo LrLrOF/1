@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>페어틀 생성기</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>페어틀 생성기</h1>
+
+    <input type="file" id="imageInput" accept="image/*"><br>
+    <input type="text" id="name" placeholder="이름">
+    <input type="text" id="info" placeholder="나이 / 성별 / 키">
+    <textarea id="feature" placeholder="특징 (한 줄에 하나씩)"></textarea>
+    <input type="text" id="animal" placeholder="동물화">
+    <input type="text" id="palette" placeholder="컬러 팔레트 (ex. #ffaaaa,#aaffaa)">
+    <input type="text" id="imageColor" placeholder="이미지컬러 (예: 검정/파랑)"><br>
+
+    <button onclick="addCharacter()">➕ 캐릭터 추가</button>
+    <button onclick="saveAllAsImage()">💾 이미지 저장</button>
+    <button onclick="clearAllCards()">🗑 초기화</button>
+
+    <div id="outerContainer" class="outer-container">
+      <div id="cardWrapper" class="card-wrapper">
+        <!-- 여기에 카드가 들어감 -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

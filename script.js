@@ -2,7 +2,7 @@ function addCharacter() {
   const copyright = document.getElementById("copyright").value;
   const name = document.getElementById("name").value;
   const info = document.getElementById("info").value;
-  const featureText = document.getElementById("feature").value;
+  const feature = document.getElementById("feature").value;
   const animal = document.getElementById("animal").value;
   const palette = document.getElementById("palette").value;
   const imageColor = document.getElementById("imageColor").value;

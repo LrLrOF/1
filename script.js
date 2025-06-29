@@ -26,17 +26,10 @@ function addCharacter() {
       ${copyright ? `<div class="copyright-text">${copyright}</div>` : ''}
       ${name ? `<h2>${name}</h2>` : ''}
       ${info ? `<div class="info-text">${info}</div>` : ''}
-
-      <div class="label-box">특징</div>
-      <p>${featureText
-            .split('\n')
-            .map(f => `- ${f}`)
-            .join('<br>')}
-      </p>
-
-      ${featureText ? `
+      
+      ${feature ? `
         <div class="label-box">특징</div>
-        <p>${featureText
+        <p>${feature
           .split('\n')
           .map(f => `- ${f}`)
           .join('<br>')}</p>

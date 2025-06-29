@@ -6,7 +6,7 @@ function addCharacter() {
   const animal = document.getElementById("animal").value;
   const palette = document.getElementById("palette").value;
   const imageColor = document.getElementById("imageColor").value;
-  const file = document.getElementById("imageInput").files[0];
+  const file = document.getElementById("image").files[0];
 
   if (!file) {
     alert("이미지는 필수입니다.");

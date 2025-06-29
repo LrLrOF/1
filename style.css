@@ -50,8 +50,8 @@ button {
 
 .card {
   width: 250px;
-  min-width: 250px; /* 줄어드는 것 방지 */
-  flex-shrink: 0;   /* flexbox 줄이기 비활성화 */
+  min-width: 250px; 
+  flex-shrink: 0;  
   background-color: #fefefe;
   border: 1px solid #ccc;
   border-radius: 20px;
@@ -64,10 +64,10 @@ button {
 
 #groupCard {
   display: grid;
-  grid-template-columns: repeat(4, 250px); /* 카드당 너비 고정 */
-  gap: 40px; /* 카드 간 간격 */
-  justify-content: center; /* 카드 가운데 정렬 */
-  width: 1200px; /* 총 너비 수동 설정 (250*4 + 24*3 = 1096 여유 있게) */
+  grid-template-columns: repeat(4, 250px);
+  gap: 40px;
+  justify-content: center; 
+  width: 1200px;
   margin: 0 auto;
   padding: 20px;
   background-color: #ffffff;
@@ -85,8 +85,6 @@ button {
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
-
-  /* 스크롤 바 충분히 길게 만들기 위한 최소 너비 */
   min-width: max-content; 
 }
 
@@ -96,7 +94,7 @@ button {
   box-sizing: border-box;
   overflow-x: auto;
   white-space: nowrap;
-  padding: 0 20px;  /* 좌우 여백 */
+  padding: 0 20px;
 }
 
 .card-wrapper {
@@ -107,8 +105,8 @@ button {
 
 
 #cardWrapper {
-  display: inline-flex;      /* 콘텐츠 너비만큼만 차지 */
-  gap: 20px;                 /* 카드 간 간격 */
+  display: inline-flex;
+  gap: 20px; 
 }
 
 
@@ -147,9 +145,9 @@ button {
   display: inline-block;
   border-radius: 4px;
   border: 1px solid #000;
-  margin-right: 2px; /* 컬러박스 간 간격 */
+  margin-right: 2px;
   position: relative;
-  top: 6px; /* 원하는 만큼 아래로 내림 */
+  top: 6px; 
 }
 
 

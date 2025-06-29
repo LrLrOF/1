@@ -21,30 +21,6 @@ function addCharacter() {
 
     const colors = palette.split(',');
 
-    // 조건부 구성
-    const animalHtml = animal.trim() ? `
-      <div class="info-inline">
-        <div class="label-box">동물화</div>
-        <div class="value-text">${animal}</div>
-      </div>
-    ` : '';
-
-    const paletteHtml = palette.trim() ? `
-      <div class="info-inline">
-        <div class="label-box">컬러팔레트</div>
-        <div class="value-text">
-          ${colors.map(c => `<span class="color-box" style="background-color:${c.trim()}"></span>`).join('')}
-        </div>
-      </div>
-    ` : '';
-
-    const imageColorHtml = imageColor.trim() ? `
-      <div class="info-inline">
-        <div class="label-box">이미지컬러</div>
-        <div class="value-text">${imageColor}</div>
-      </div>
-    ` : '';
-    
     card.innerHTML = 
       <img src="${e.target.result}">
       ${copyright ? <div class="copyright-text">${copyright}</div> : ''}
@@ -52,11 +28,29 @@ function addCharacter() {
       ${info ? <div class="info-text">${info}</div> : ''}
 
       <div class="label-box">특징</div>
-      <p>${featureText.split('\n').map(f => `- ${f}`).join('<br>')}</p>
+      <p>${
+        featureText
+          .split('\n')
+          .map(f => - ${f})
+          .join('<br>')
+      }</p>
 
-      ${animalHtml}
-      ${paletteHtml}
-      ${imageColorHtml}
+      <div class="info-inline">
+        <div class="label-box">동물화</div>
+        <div>${animal}</div>
+      </div>
+
+      <div class="info-inline">
+        <div class="label-box">컬러팔레트</div>
+        <div>
+          ${colors.map(c => <span class="color-box" style="background-color:${c.trim()}"></span>).join('')}
+        </div>
+      </div>
+
+      <div class="info-inline">
+        <div class="label-box">이미지컬러</div>
+        <div>${imageColor}</div>
+      </div>
 
       <button class="delete-btn" onclick="this.closest('.card').remove()">🗑 삭제</button>
     ;

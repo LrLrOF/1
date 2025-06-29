@@ -55,9 +55,12 @@ function addCharacter() {
       ${imageColor ? `
         <div class="info-inline">
           <div class="label-box">이미지컬러</div>
-          <div>${imageColor}</div>
+          <div style="${/^#([0-9A-Fa-f]{3}){1,2}$/.test(imageColor.trim()) ? `color: ${imageColor.trim()}` : ''}">
+            ${imageColor}
+          </div>
         </div>` : ''
       }
+
 
       <button class="delete-btn" onclick="this.closest('.card').remove()">🗑 삭제</button>
     `;

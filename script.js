@@ -23,7 +23,7 @@ function addCharacter() {
 
     card.innerHTML = `
       <img src="${e.target.result}">
-      <p3>${name}</p3>
+      <h6>${copyright}</h6>
       <h2>${name}</h2>
 
       <div class="info-block">

@@ -128,7 +128,7 @@ button {
 .card h2 {
   text-align: center;
   margin-top: 3px;
-  margin-bottom: 3px 0;
+  margin-bottom: 2px 0;
 }
 
 .label-box {
@@ -190,7 +190,7 @@ button {
 
 .card .info-block {
   text-align: center;
-  margin-top: 3px;
+  margin-top: 0px;
   margin-bottom: 8px;
 }
 

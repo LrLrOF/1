@@ -1,4 +1,5 @@
 function addCharacter() {
+  const name = document.getElementById("copyright").value;
   const name = document.getElementById("name").value;
   const info = document.getElementById("info").value;
   const featureText = document.getElementById("feature").value;
@@ -22,6 +23,7 @@ function addCharacter() {
 
     card.innerHTML = `
       <img src="${e.target.result}">
+      <p3>${name}</p3>
       <h2>${name}</h2>
 
       <div class="info-block">

@@ -23,7 +23,7 @@ function addCharacter() {
 
     card.innerHTML = `
       <img src="${e.target.result}">
-      ${copyright ? `<div class="source-text">${copyright}</div>` : ''}
+      ${copyright ? `<div class="copyright-text">${copyright}</div>` : ''}
       <h2>${name}</h2>
 
       <div class="info-block">

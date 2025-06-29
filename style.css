@@ -127,7 +127,7 @@ button {
 
 .card h2 {
   text-align: center;
-  margin-top: 3px;
+  margin-top: 2px;
   margin-bottom: 2px;
 }
 
@@ -188,9 +188,9 @@ button {
 }
 
 
-.card .info-block {
+.card .info-text {
   text-align: center;
-  margin-top: 0px;
+  margin-top: 1px;
   margin-bottom: 8px;
 }
 

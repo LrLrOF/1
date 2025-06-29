@@ -21,21 +21,6 @@ function addCharacter() {
 
     const colors = palette.split(',');
 
-    card.innerHTML = `
-      <img src="${e.target.result}">
-      ${copyright ? `<div class="copyright-text">${copyright}</div>` : ''}
-      ${name ? `<h2>${name}</h2>` : ''}
-      ${info ? `<div class="info-text">${info}</div>` : ''}
-
-      <div class="label-box">특징</div>
-      <p>${
-        featureText
-          .split('\n')
-          .map(f => `- ${f}`)
-          .join('<br>')
-      }</p>
-
-     
     // 조건부 구성
     const animalHtml = animal.trim() ? `
       <div class="info-inline">
@@ -59,12 +44,12 @@ function addCharacter() {
         <div class="value-text">${imageColor}</div>
       </div>
     ` : '';
-
-    card.innerHTML = `
+    
+    card.innerHTML = 
       <img src="${e.target.result}">
-      ${copyright ? `<div class="copyright-text">${copyright}</div>` : ''}
-      ${name ? `<h2>${name}</h2>` : ''}
-      ${info ? `<div class="info-text">${info}</div>` : ''}
+      ${copyright ? <div class="copyright-text">${copyright}</div> : ''}
+      ${name ? <h2>${name}</h2> : ''}
+      ${info ? <div class="info-text">${info}</div> : ''}
 
       <div class="label-box">특징</div>
       <p>${featureText.split('\n').map(f => `- ${f}`).join('<br>')}</p>
@@ -73,7 +58,9 @@ function addCharacter() {
       ${paletteHtml}
       ${imageColorHtml}
 
-  
+      <button class="delete-btn" onclick="this.closest('.card').remove()">🗑 삭제</button>
+    ;
+
     // 카드 추가는 내부 스크롤 영역(cardWrapper)에 추가
     document.getElementById("cardWrapper").appendChild(card);
 

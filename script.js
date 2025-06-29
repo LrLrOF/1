@@ -107,6 +107,7 @@ function saveAllAsImage() {
 
 
 function clearInputs() {
+  document.getElementById("copyright").value = "";
   document.getElementById("name").value = "";
   document.getElementById("info").value = "";
   document.getElementById("feature").value = "";

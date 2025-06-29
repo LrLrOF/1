@@ -65,11 +65,9 @@ function addCharacter() {
       <button class="delete-btn" onclick="this.closest('.card').remove()">🗑 삭제</button>
     `;
 
-
-    // 카드 추가는 내부 스크롤 영역(cardWrapper)에 추가
     document.getElementById("cardWrapper").appendChild(card);
 
-    clearInputs(); // 입력창 자동 초기화
+    clearInputs();
   };
 
   reader.readAsDataURL(file);
@@ -77,12 +75,8 @@ function addCharacter() {
 
 function saveAllAsImage() {
   const target = document.getElementById("cardWrapper");
-
-  // 삭제 버튼 숨기기
   const deleteButtons = target.querySelectorAll(".delete-btn");
   deleteButtons.forEach(btn => btn.style.display = "none");
-
-  // 캡처 전 스타일 보존 및 최소화
   const originalStyle = {
     backgroundColor: target.style.backgroundColor,
     border: target.style.border,
@@ -95,7 +89,7 @@ function saveAllAsImage() {
   target.style.border = "none";
   target.style.borderRadius = "0";
   target.style.boxShadow = "none";
-  target.style.width = "auto"; // 콘텐츠 너비에 맞게 캡처
+  target.style.width = "auto"; 
 
   html2canvas(target, {
     backgroundColor: null,
@@ -106,8 +100,7 @@ function saveAllAsImage() {
     link.download = "설정표.png";
     link.href = canvas.toDataURL();
     link.click();
-
-    // 스타일 복구
+    
     deleteButtons.forEach(btn => btn.style.display = "block");
     Object.assign(target.style, originalStyle);
   });

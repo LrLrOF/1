@@ -173,6 +173,14 @@ button {
   white-space: nowrap;
 }
 
+.copyright-text {
+  font-size: 0.75rem;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+
 .value-text {
   flex: 1;
   word-break: break-word;

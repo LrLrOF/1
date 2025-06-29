@@ -1,5 +1,5 @@
 function addCharacter() {
-  const name = document.getElementById("copyright").value;
+  const copyright = document.getElementById("copyright").value;
   const name = document.getElementById("name").value;
   const info = document.getElementById("info").value;
   const featureText = document.getElementById("feature").value;

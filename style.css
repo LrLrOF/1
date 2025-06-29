@@ -164,7 +164,8 @@ button {
   align-items: center;
   gap: 10px;
   margin-bottom: 5px 0;
-  top: 20px;
+  position: relative;
+  top: 10px;
 }
 
 .label-box {

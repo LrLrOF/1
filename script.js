@@ -25,7 +25,7 @@ function addCharacter() {
       <img src="${e.target.result}">
       ${copyright ? `<div class="copyright-text">${copyright}</div>` : ''}
       ${name ? `<h2>${name}</h2>` : ''}
-      ${info ? `<div class="info-block">${info}</div>` : ''}
+      ${info ? `<div class="info-text">${info}</div>` : ''}
 
       <div class="label-box">특징</div>
       <p>${

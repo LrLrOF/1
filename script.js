@@ -34,6 +34,15 @@ function addCharacter() {
             .join('<br>')}
       </p>
 
+      ${featureText ? `
+        <div class="label-box">특징</div>
+        <p>${featureText
+          .split('\n')
+          .map(f => `- ${f}`)
+          .join('<br>')}</p>
+      ` : ''}
+
+
       ${animal ? `
         <div class="info-inline">
           <div class="label-box">동물화</div>

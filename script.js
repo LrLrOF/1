@@ -115,7 +115,7 @@ function clearInputs() {
   document.getElementById("animal").value = "";
   document.getElementById("palette").value = "";
   document.getElementById("imageColor").value = "";
-  document.getElementById("imageInput").value = "";
+  document.getElementById("image").value = "";
 }
 
 function clearAllCards() {

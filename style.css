@@ -161,11 +161,9 @@ button {
 
 .info-inline {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
   margin-bottom: 5px 0;
-  position: relative;
-  top: 10px;
 }
 
 .label-box {

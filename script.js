@@ -21,39 +21,45 @@ function addCharacter() {
 
     const colors = palette.split(',');
 
-    card.innerHTML = 
+    card.innerHTML = `
       <img src="${e.target.result}">
-      ${copyright ? <div class="copyright-text">${copyright}</div> : ''}
-      ${name ? <h2>${name}</h2> : ''}
-      ${info ? <div class="info-text">${info}</div> : ''}
+      ${copyright ? `<div class="copyright-text">${copyright}</div>` : ''}
+      ${name ? `<h2>${name}</h2>` : ''}
+      ${info ? `<div class="info-text">${info}</div>` : ''}
 
       <div class="label-box">특징</div>
-      <p>${
-        featureText
-          .split('\n')
-          .map(f => - ${f})
-          .join('<br>')
-      }</p>
+      <p>${featureText
+            .split('\n')
+            .map(f => `- ${f}`)
+            .join('<br>')}
+      </p>
 
-      <div class="info-inline">
-        <div class="label-box">동물화</div>
-        <div>${animal}</div>
-      </div>
+      ${animal ? `
+        <div class="info-inline">
+          <div class="label-box">동물화</div>
+          <div>${animal}</div>
+        </div>` : ''
+      }
 
-      <div class="info-inline">
-        <div class="label-box">컬러팔레트</div>
-        <div>
-          ${colors.map(c => <span class="color-box" style="background-color:${c.trim()}"></span>).join('')}
-        </div>
-      </div>
+      ${palette ? `
+        <div class="info-inline">
+          <div class="label-box">컬러팔레트</div>
+          <div>
+            ${colors.map(c => `<span class="color-box" style="background-color:${c.trim()}"></span>`).join('')}
+          </div>
+        </div>` : ''
+      }
 
-      <div class="info-inline">
-        <div class="label-box">이미지컬러</div>
-        <div>${imageColor}</div>
-      </div>
+      ${imageColor ? `
+        <div class="info-inline">
+          <div class="label-box">이미지컬러</div>
+          <div>${imageColor}</div>
+        </div>` : ''
+      }
 
       <button class="delete-btn" onclick="this.closest('.card').remove()">🗑 삭제</button>
-    ;
+    `;
+
 
     // 카드 추가는 내부 스크롤 영역(cardWrapper)에 추가
     document.getElementById("cardWrapper").appendChild(card);

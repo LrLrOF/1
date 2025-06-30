@@ -209,3 +209,14 @@ button {
   cursor: pointer;
   font-size: 12px;
 }
+
+
+.card h2,
+.info-text,
+.card p,
+.info-inline > div:last-child,
+.color-label {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}

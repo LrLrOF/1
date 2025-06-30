@@ -53,7 +53,7 @@ function addCharacter() {
 
       ${palette ? `
         <div class="info-inline">
-          <div class="label-box">컬러팔레트</div>
+          <div class="label-box">컬러파레트</div>
           <div class="palette-wrapper">
             ${colors.map(c => `<span class="color-box" style="background-color:${c.trim()}"></span>`).join('')}
           </div>

@@ -2,6 +2,7 @@ function addCharacter() {
   const copyright = document.getElementById("copyright").value;
   const name = document.getElementById("name").value;
   const info = document.getElementById("info").value;
+  const personality = document.getElementById("personality").value;
   const feature = document.getElementById("feature").value;
   const animal = document.getElementById("animal").value;
   const palette = document.getElementById("palette").value;
@@ -26,6 +27,13 @@ function addCharacter() {
       ${copyright ? `<div class="copyright-text">${copyright}</div>` : ''}
       ${name ? `<h2>${name}</h2>` : ''}
       ${info ? `<div class="info-text">${info}</div>` : ''}
+
+      ${personality ? `
+        <div class="info-inline">
+          <div class="label-box">성격</div>
+          <div>${personality}</div>
+        </div>` : ''
+      }
       
       ${feature ? `
         <div class="label-box">특징</div>
@@ -112,6 +120,7 @@ function clearInputs() {
   document.getElementById("copyright").value = "";
   document.getElementById("name").value = "";
   document.getElementById("info").value = "";
+  document.getElementById("personality").value = "";
   document.getElementById("feature").value = "";
   document.getElementById("animal").value = "";
   document.getElementById("palette").value = "";

@@ -150,6 +150,12 @@ button {
   top: 6px; 
 }
 
+.palette-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;    
+  max-width: 140px; 
+}
 
 
 .card p {

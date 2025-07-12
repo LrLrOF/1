@@ -106,7 +106,7 @@ function saveAllAsImage() {
     scale: 2
   }).then(canvas => {
     const link = document.createElement("a");
-    link.download = "설정표.png";
+    link.download = "다운로드.png";
     link.href = canvas.toDataURL();
     link.click();
     
